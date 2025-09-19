@@ -1,0 +1,210 @@
+/* Gen Z pastel style */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #3a6604, #5a7d1a, #7fa935);
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .navbar h1 {
+    font-size: 24px;
+    color: #dbe0e6;
+  
+    display: flex;        /* make image and text a flex row */
+    align-items: center;  /* vertically center the text with the image */
+    gap: 10px;            /* optional spacing between image and text */
+    margin: 0;            /* remove default h1 margin */
+  }
+  
+  .nav-buttons button {
+    margin-left: 10px;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border: 2px solid #a0bcd5;
+    border-radius: 12px;
+    color: #1f2937;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .nav-buttons button:hover {
+    background: linear-gradient(135deg, #a7d7ff, #d4eaff);
+    transform: scale(1.05);
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .column {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  }
+  
+  .column h2 {
+    margin-bottom: 12px;
+    color: #34495e;
+  }
+  
+  textarea {
+    width: 96%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    resize: none;
+    font-size: 16px;
+    background-color: #fdfdfd;
+    color: #2c3e50;
+  }
+  
+
+  /* Footer styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #3a6604, #5a7d1a, #7fa935);
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .footer-btn {
+    background: #ffffff;
+    border: 1px solid #d3d3d3;
+    color: #333;
+    padding: 10px 16px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+  }
+  
+  .footer-btn:hover {
+    background: #e0f7fa;
+    color: #00796b;
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+  
+  .footer-btn i {
+    font-size: 16px;
+  }
+  
+  .word-count-wrapper {
+    display: flex;
+    justify-content: space-between; /* word count left, button right */
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .humanize-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    background: linear-gradient(135deg, #3a6604, #6b8e23, #a8c256);
+    color: #f1faee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .humanize-btn:hover {
+    background: linear-gradient(135deg, #1d3557, #a8dadc);
+    color: #e0fbfc;
+    box-shadow: 0 8px 15px rgba(29, 53, 87, 0.6);
+    transform: scale(1.08);
+  }
+  
+  
+
+
+
+
+
+    /* Hide popup by default */
+.settings-popup {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 14px 16px;
+  z-index: 999;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Theme buttons */
+.theme-option {
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.theme-option:hover {
+  background-color: #e0e0e0;
+}
+
+.theme-option.selected {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dark mode styling */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .settings-popup {
+  background-color: #1f1f1f;
+}
+
+.dark-mode .theme-option {
+  background-color: #2b2b2b;
+  color: #ccc;
+}
+
+.dark-mode .theme-option.selected {
+  background-color: #f1f1f1;
+  color: #000;
+}

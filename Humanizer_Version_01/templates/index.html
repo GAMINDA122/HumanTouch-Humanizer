@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Humanizer</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* NEW: display similarity next to word count */
+    .output-word-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 5px;
+      font-size: 0.9rem;
+    }
+    .similarity-score {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    
+    <h1>
+      <img src="{{ url_for('static', filename='vits.jpg') }}" alt="Gaminda Icon" style="width:80px; height:50px; vertical-align:text-bottom;">
+      Humanize AI Text with HumanTouch Humanizer
+    </h1>
+    <div class="nav-buttons">
+      <button id="advancedBtn">⚙️ Advanced Features</button>
+      <button id="logoutBtn">🚪 Logout</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="column">
+      <h2>🤖 AI Generated Text</h2>
+      <textarea id="aiInput" placeholder="Paste AI text here..."></textarea>
+      <div class="word-count-wrapper">
+        <div class="word-count">
+          Words: <span id="inputWordCount">0</span>/500
+        </div>
+        <button class="humanize-btn">✨ Humanize</button>
+      </div>
+    </section>
+
+    <section class="column">
+      <h2>🧍 Humanized Output</h2>
+      <textarea id="humanizedOutput" readonly placeholder="Humanized content appears here..."></textarea>
+      <div class="output-word-wrapper">
+        <div class="word-count">
+          Words: <span id="outputWordCount">0</span>/500
+        </div>
+        <div class="similarity-score">
+          Similarity: <span id="similarityScore">0.00%</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-buttons">
+      <button class="footer-btn" onclick="location.reload();">
+        <i class="fas fa-home"></i><span>Home</span>
+      </button>
+      <button class="footer-btn" onclick="location.reload();">
+        <i class="fas fa-history"></i><span>History</span>
+      </button>
+      <button class="footer-btn" id="settingsBtn">
+        <i class="fas fa-cog"></i><span>Settings</span>
+      </button>
+      <div id="settingsPopup" class="settings-popup">
+        <div class="theme-option selected" id="lightMode">
+          <i class="fas fa-sun"></i> Light
+        </div>
+        <div class="theme-option" id="darkMode">
+          <i class="fas fa-moon"></i> Dark
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
